@@ -1,0 +1,22 @@
+moves=0
+def hanoi(n,A,B,C):
+    global moves
+    if n == 1:
+        print('Move disc %s from %s to %s' % (n,A,B))
+        moves=moves+1
+        print(A,B,C)	
+        print('moves: %s ' % moves )		
+    else:
+        
+        hanoi(n-1,A,C,B)
+        print('Move disc %s from %s to %s' % (n,A,B))
+        moves=moves+1
+        print(A,B,C)
+        print('moves: %s ' % moves )
+        hanoi(n-1,C,B,A)
+
+number=int(raw_input("How many discs: "))		
+a='A'
+b='B'
+c='C'
+hanoi(number,a,b,c)
