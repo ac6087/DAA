@@ -16,7 +16,4 @@ def hanoi(n,A,B,C):
         hanoi(n-1,C,B,A)
 
 number=int(raw_input("How many discs: "))		
-a='A'
-b='B'
-c='C'
-hanoi(number,a,b,c)
+hanoi(number,1,2,3)
