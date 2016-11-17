@@ -1,0 +1,53 @@
+class Node(object):
+  
+  def __init_(self,data,next):
+    self.data=data
+    self.next=next
+  
+  def node_value(self):
+    return self.data
+    
+  def node_next(self,next):
+    return self.next=next
+    
+class linked_list(object):
+  
+  def __init(self,head=None):
+    self.head=head
+  
+  def insert(self,data):
+    node=Node(data)
+    node.node_next(self.head)
+    self.head=node
+    
+  def size_list(self):
+    current=self.head
+    count=0
+    while current is not None:
+      count+=1
+      current=current.node_next()
+    return count
+    
+  def search(self,k):
+    current=self.head
+    while current:
+      if current.node_value == k:
+        break
+      else:
+        current=current.node_next
+    if cuurent is None:
+      raise ValueError()
+    return current
+    
+  def delete(self,k):
+    current=self.head
+    
+    while current:
+      if current.node_data() == k:
+          break
+      else:
+        current=current.node_next()
+    if current in None:
+      raise ValueError
+    
+    
